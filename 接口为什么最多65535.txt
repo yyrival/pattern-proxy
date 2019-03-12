@@ -1,0 +1,7 @@
+由于java使用UNICODE(UCS-2)标准字符集，为16位，因此一共能表示2的16次方个字符，即65535个
+
+类或接口的直接超接口的数量被ClassFile结构的interfaces_count项的大小限制为65535。
+
+Class文件中方法、字段等都需要引用CONSTANT_UTF8_info型常量来描述名称，所以CONSTANT_UTF8_info型常量的最大长度也就是Java中方法和字段名的最大长度。最大值length是65535，所以Java程序中如果定义了超过64KB英文字符的变量或方法名，将会无法编译。
+
+在java中：Java类或接口最多可以有65,535种方法。Java中构造函数的代码限制为65,535字节
